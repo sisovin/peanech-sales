@@ -157,7 +157,7 @@ const SalesDataTable: React.FC<SalesDataTableProps> = ({
               <PopoverContent className="w-auto p-0" align="start">
                 <Calendar
                   mode="range"
-                  selected={date}
+                  selected={date.from ? (date as { from: Date; to?: Date }) : undefined}
                   onSelect={handleDateSelect}
                   initialFocus
                 />
